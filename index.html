@@ -11,9 +11,12 @@
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
 
-    <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
-    </script>
+    <button autofocus>Hello</button>
+
+    <!-- Will get focus with Electron 1.8.*, but not 2.0.*. or 3.0.* -->
+    <webview src="https://google.com"></webview>
+
+    <!-- Will get focus with all Electron 1.8.*, 2.0.*., and 3.0.* -->
+    <webview src="https://yandex.com" tabindex="0"></webview>
   </body>
 </html>
